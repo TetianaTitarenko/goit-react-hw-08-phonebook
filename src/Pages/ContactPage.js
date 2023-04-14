@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Helmet } from 'react-helmet';
 import { Contacts } from '../components/Contacts/Contacts';
 import { NameForm } from '../components/NameForm/NameForm';
 import { Filter } from '../components/Filter/Filter';
@@ -17,13 +16,11 @@ export default function ContactsList() {
 
   return (
     <>
-      {/* <Helmet> */}
-      <title>Your tasks</title>
-      {/* </Helmet> */}
+      <h2>Your contacts</h2>
       <NameForm />
       <Filter />
-      <div>{isLoading && 'Request in progress...'}</div>
       <Contacts />
+      <div>{isLoading && '111111Request in progress...'}</div>
     </>
   );
 }

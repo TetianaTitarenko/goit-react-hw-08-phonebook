@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
-import { refreshUser } from 'redux/auth/operations';
+import { refreshUser } from '../redux/auth/operations';
 import { selectIsRefreshing } from '../redux/auth/selectors';
 
 const Home = lazy(() => import('../Pages/HomePage'));
@@ -48,21 +48,3 @@ export const App = () => {
     </Routes>
   );
 };
-
-// import { Route, Routes } from 'react-router-dom';
-// import NameForm from './NameForm/NameForm';
-// import Contacts from './Contacts/Contacts';
-// import Filter from './Filter/Filter';
-// import Layout from './Layout';
-
-// function App() {
-//   return (
-//     <Layout>
-//       <NameForm />
-//       <Filter />
-//       <Contacts />
-//     </Layout>
-//   );
-// }
-
-// export default App;

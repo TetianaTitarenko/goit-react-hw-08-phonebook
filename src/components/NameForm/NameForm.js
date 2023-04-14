@@ -6,14 +6,8 @@ import { nanoid } from 'nanoid';
 import Input from './NameForm.styled';
 
 const FormSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  number: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
+  name: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!'),
+  number: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!'),
 });
 
 export const NameForm = () => {
