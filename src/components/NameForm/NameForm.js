@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
-import Input from './NameForm.styled';
+import { Input, Button } from './NameForm.styled';
 
 const FormSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!'),
@@ -54,7 +54,7 @@ export const NameForm = () => {
           />
           <ErrorMessage name="number" component="span" />
         </label>
-        <button type="submit">Add contact</button>
+        <Button type="submit">Add contact</Button>
       </Form>
     </Formik>
   );

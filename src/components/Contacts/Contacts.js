@@ -6,7 +6,7 @@ import {
   selectIsLoading,
   selectFilter,
 } from '../../redux/contacts/selectors';
-import { List, ListItem } from './Contact.styled';
+import { List, ListItem, Btn } from './Contact.styled';
 
 export const Contacts = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const Contacts = () => {
             <p>
               {contact.name} : {contact.number}
             </p>
-            <button onClick={() => onDelete(contact.id)}>Delete</button>
+            <Btn onClick={() => onDelete(contact.id)}>Delete</Btn>
           </ListItem>
         ))
       )}
